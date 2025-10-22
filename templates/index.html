@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Image Upload - Image Processing App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; max-width:700px; margin:40px auto; padding:0 16px; }
+    .card { border:1px solid #eee; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+    h1 { margin-top:0; }
+    input[type=file] { display:block; margin-bottom:10px; }
+    .note { color:#666; font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Upload an Image</h1>
+    <p class="note">Upload an image and we'll show grayscale, edges, blur and save a vector representation in FAISS.</p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required />
+      <button type="submit">Upload & Process</button>
+    </form>
+  </div>
+</body>
+</html>
