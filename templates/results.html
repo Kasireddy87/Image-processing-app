@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Results - Image Processing App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; max-width:900px; margin:30px auto; padding:0 16px; }
+    .grid { display:flex; gap:12px; flex-wrap:wrap; }
+    .card { border:1px solid #eee; padding:12px; border-radius:8px; min-width:200px; text-align:center; }
+    img { max-width:100%; height:auto; display:block; margin:0 auto 8px; }
+    .back { margin-top:16px; display:inline-block; }
+  </style>
+</head>
+<body>
+  <h1>Image Processing Results</h1>
+  <p>{{ message }}</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Original</h3>
+      <img src="{{ original }}" alt="original image" />
+    </div>
+    <div class="card">
+      <h3>Grayscale</h3>
+      <img src="{{ gray }}" alt="grayscale" />
+    </div>
+    <div class="card">
+      <h3>Edges</h3>
+      <img src="{{ edges }}" alt="edges" />
+    </div>
+    <div class="card">
+      <h3>Blur</h3>
+      <img src="{{ blur }}" alt="blur" />
+    </div>
+  </div>
+
+  <a class="back" href="/">⬅ Upload another</a>
+</body>
+</html>
